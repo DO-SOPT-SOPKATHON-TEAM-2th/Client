@@ -1,0 +1,1 @@
+// import BannerProfileIc from './icon/banner/bannerProfileIc.svg?react';
