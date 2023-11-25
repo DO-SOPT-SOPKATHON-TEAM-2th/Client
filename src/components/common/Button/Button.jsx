@@ -3,12 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Button = (props) => {
-  const { to, children, disabled } = props;
+  const { to, children, disabled, onClick } = props;
 
   const navigate = useNavigate();
 
   const handleNavigate = () => {
     navigate(to);
+    onClick();
   };
 
   return (
