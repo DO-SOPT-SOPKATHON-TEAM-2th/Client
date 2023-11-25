@@ -4,11 +4,13 @@ import styled from 'styled-components';
 import { MainWriteIc, NavigationRightIc } from '../../assets';
 import mainImg from '../../assets/images/mainImg@2x.png';
 import Header from '../../components/Main/Header';
+import useRouter from '../../hooks/useRouter';
 import calculateDate from '../../utils/CalculateDate';
 
 /** Main page */
 const Main = () => {
   const [getCount, setGetCount] = useState(0);
+  const { handleRouter } = useRouter();
 
   const { Month, Day } = calculateDate();
   console.log(Month, Day);
@@ -28,6 +30,13 @@ const Main = () => {
     getDiaryCount();
   }, []);
 
+  const handleOnClickWriting = () => {
+    handleRouter('/post');
+  };
+  const handleOnClickView = () => {
+    handleRouter('/board');
+  };
+
   return (
     <St.MainWrapper>
       <St.RemainContainer></St.RemainContainer>
@@ -45,14 +54,14 @@ const Main = () => {
         <St.MainImage src={mainImg} alt="메인이미지" />
       </St.MainImageWrapper>
       <St.ButtonWrapper>
-        <St.WritingBtn>
+        <St.WritingBtn onClick={handleOnClickWriting}>
           <MainWriteIc />
           <St.WritingTextWrapper>
             내일은 무슨 일이 일어나나요?
             <NavigationRightIc />
           </St.WritingTextWrapper>
         </St.WritingBtn>
-        <St.ViewBtn>
+        <St.ViewBtn onClick={handleOnClickView}>
           <span>누군가의 내일 보러가기</span>
           <NavigationRightIc />
         </St.ViewBtn>
