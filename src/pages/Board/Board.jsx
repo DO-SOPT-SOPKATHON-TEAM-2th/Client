@@ -1,6 +1,6 @@
-/** Board page */
 import React from 'react';
 
+/** Board page */
 const Board = () => {
   return <div>Board</div>;
 };
