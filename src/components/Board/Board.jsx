@@ -1,10 +1,9 @@
 /** Board page */
-import { NavigationLeftIc, BoardLikeOffIc } from '@assets';
+import { NavigationLeftIc } from '@assets';
 import styled from 'styled-components';
 import { SectionContainer } from '@styles/common/commonStyle';
 import Button from '../common/Button/Button';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import BoardArticle from './BoardArticle';
 
 const Board = () => {
@@ -31,7 +30,7 @@ const Board = () => {
         <BoardArticle />
         <BoardArticle />
       </ArticleList>
-      <Button disabled={true}>내일 일기 쓰기</Button>
+      <Button>내일 일기 쓰기</Button>
     </SectionContainer>
   );
 };

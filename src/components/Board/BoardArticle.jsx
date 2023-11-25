@@ -1,8 +1,11 @@
 /** Board page */
-import { BoardLikeOffIc } from '@assets';
+import { BoardLikeOffIc, BoardLikeOnIc } from '@assets';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 const BoardArticle = () => {
+  const [isLike, setIsLike] = useState(false);
+
   return (
     <li>
       <ArticleContainer>
@@ -12,8 +15,12 @@ const BoardArticle = () => {
         </ArticleText>
         <div>
           <p>bye091790</p>
-          <button>
-            <BoardLikeOffIc />
+          <button
+            onClick={() => {
+              setIsLike((prev) => !prev);
+            }}>
+            {!isLike && <BoardLikeOffIc />}
+            {isLike && <BoardLikeOnIc />}
           </button>
         </div>
       </ArticleContainer>
