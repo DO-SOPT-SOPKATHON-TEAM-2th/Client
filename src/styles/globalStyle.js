@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     width: 136.6rem;
     margin: 0 auto;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     letter-spacing: normal;
   }
 `;
