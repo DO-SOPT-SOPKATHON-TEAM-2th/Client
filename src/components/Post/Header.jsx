@@ -12,7 +12,7 @@ const Header = ({ isButtonDisabled }) => {
         <NavigationLeftIc />
       </St.IconWrapper>
       <St.HeaderTitle>글쓰기</St.HeaderTitle>
-      <St.ButtonWrapper>
+      <St.ButtonWrapper to="/board">
         <SaveBtn isButtonDisabled={isButtonDisabled} />
       </St.ButtonWrapper>
     </St.HeaderWrapper>
@@ -36,7 +36,7 @@ const St = {
     color: ${({ theme }) => theme.colors.white};
   `,
 
-  ButtonWrapper: styled.div`
+  ButtonWrapper: styled(Link)`
     margin-left: auto;
     margin-top: 0.8rem;
   `,
