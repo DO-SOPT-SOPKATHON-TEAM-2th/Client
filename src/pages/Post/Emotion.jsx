@@ -12,7 +12,8 @@ const Emotion = () => {
         <St.PageWrapper>
             <EmotionHeader />
             <SelectEmotion setIsDisabled={setIsDisabled} />
-            <Button disabled={isDisabled}>다음으로 넘어가기</Button>
+            <Button disabled={isDisabled}
+                to="/post">다음으로 넘어가기</Button>
         </St.PageWrapper>
     )
 }
