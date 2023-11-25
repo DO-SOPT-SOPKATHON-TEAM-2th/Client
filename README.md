@@ -152,4 +152,7 @@
 ![KakaoTalk_Photo_2023-11-25-22-37-08](https://github.com/DO-SOPT-SOPKATHON-TEAM-2th/Client/assets/96781926/30c74879-ca8e-4a3d-8550-d51eecc253d5)
  
 <h3>After</h3>
-<img src="" alt="웨비 팀원들 사진 (after)"/>
+
+![KakaoTalk_Photo_2023-11-26-08-20-15](https://github.com/DO-SOPT-SOPKATHON-TEAM-2th/Client/assets/96781926/30287dcd-5aa7-4869-a3ed-fc6b1486ac78)
+
+
