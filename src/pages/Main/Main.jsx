@@ -6,28 +6,27 @@ import mainImg from '../../assets/images/mainImg@2x.png';
 import Header from '../../components/Main/Header';
 import useRouter from '../../hooks/useRouter';
 import calculateDate from '../../utils/CalculateDate';
+import reqAPI from '../../api/reqAPI';
 
 /** Main page */
 const Main = () => {
-  const [getCount, setGetCount] = useState(0);
   const { handleRouter } = useRouter();
 
   const { Month, Day } = calculateDate();
-  console.log(Month, Day);
 
-  const getDiaryCount = async () => {
-    try {
-      const response = await axios.get(`${import.meta.env.VITE_APP_BASE_URL}/api/diary/count`);
-      const { data } = response;
-      const diaryCount = data.data;
-      setGetCount(diaryCount);
-    } catch {
-      console.log('error');
-    }
-  };
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    getDiaryCount();
+    async function fetchData() {
+      try {
+        const data = await reqAPI.get('/api/diary/count');
+        setCount(data.data.data);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    fetchData();
   }, []);
 
   const handleOnClickWriting = () => {
@@ -43,7 +42,7 @@ const Main = () => {
       <Header />
       <St.CountWrapper>
         내일을 기대하는 사람이
-        <St.CountNum> &nbsp;{getCount}명 &nbsp; </St.CountNum> 있어요.
+        <St.CountNum> &nbsp;{count}명 &nbsp; </St.CountNum> 있어요.
       </St.CountWrapper>
       <St.MainImageWrapper>
         <St.MainTextWrapper>
