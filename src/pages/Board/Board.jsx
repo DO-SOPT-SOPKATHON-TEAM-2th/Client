@@ -1,8 +1,9 @@
 import React from 'react';
+import Board from '@components/Board/Board';
 
 /** Board page */
-const Board = () => {
-  return <div>Board</div>;
+const BoardPage = () => {
+  return <Board />;
 };
 
-export default Board;
+export default BoardPage;
