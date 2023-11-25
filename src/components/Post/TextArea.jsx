@@ -2,9 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 /** TextArea Component */
-const TextArea = () => {
+const TextArea = ({ inputValues, setInputValues }) => {
+
+  const handleInputChange = (fieldName, value) => {
+    setInputValues({
+      ...inputValues,
+      [fieldName]: value,
+    });
+  };
+
+
   return (
-    <St.TextAreaInput type='text' placeholder='내용을 입력해주세요.' />
+    <St.TextAreaInput
+      type='text'
+      placeholder='내용을 입력해주세요.'
+      onChange={(e) => { handleInputChange('textarea', e.target.value) }}
+    />
   )
 }
 
