@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    width: 136.6rem;
+    width: 37.5rem;
     margin: 0 auto;
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     letter-spacing: normal;
