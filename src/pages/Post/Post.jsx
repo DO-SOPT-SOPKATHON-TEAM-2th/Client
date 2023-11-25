@@ -6,7 +6,7 @@ import TextArea from '../../components/Post/TextArea';
 import Title from '../../components/Post/Title';
 
 /** Post page */
-const Post = () => {
+const Post = ({ handleNext, emotion }) => {
   const [inputValues, setInputValues] = useState({
     title: '',
     nickname: '',
@@ -17,17 +17,11 @@ const Post = () => {
 
   return (
     <St.PostWrapper>
-      <Header isButtonDisabled={isButtonDisabled} />
+      <Header inputValues={inputValues} emotion={emotion} isButtonDisabled={isButtonDisabled} handleNext={handleNext} />
       <St.BodyWrapper>
-        <Title
-          inputValues={inputValues}
-          setInputValues={setInputValues} />
-        <Nickname
-          inputValues={inputValues}
-          setInputValues={setInputValues} />
-        <TextArea
-          inputValues={inputValues}
-          setInputValues={setInputValues} />
+        <Title inputValues={inputValues} setInputValues={setInputValues} />
+        <Nickname inputValues={inputValues} setInputValues={setInputValues} />
+        <TextArea inputValues={inputValues} setInputValues={setInputValues} />
       </St.BodyWrapper>
     </St.PostWrapper>
   );
@@ -41,9 +35,7 @@ const St = {
     background: ${({ theme }) => theme.colors.black};
   `,
 
-  Header: styled.div`
-   
-  `,
+  Header: styled.div``,
 
   BodyWrapper: styled.div`
     display: flex;
