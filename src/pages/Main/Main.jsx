@@ -1,4 +1,5 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { MainWriteIc, NavigationRightIc } from '../../assets';
 import mainImg from '../../assets/images/mainImg@2x.png';
@@ -7,9 +8,25 @@ import calculateDate from '../../utils/CalculateDate';
 
 /** Main page */
 const Main = () => {
+  const [getCount, setGetCount] = useState(0);
+
   const { Month, Day } = calculateDate();
   console.log(Month, Day);
-  const cnt = 12;
+
+  const getDiaryCount = async () => {
+    try {
+      const response = await axios.get(`${import.meta.env.VITE_APP_BASE_URL}/api/diary/count`);
+      const { data } = response;
+      const diaryCount = data.data;
+      setGetCount(diaryCount);
+    } catch {
+      console.log('error');
+    }
+  };
+
+  useEffect(() => {
+    getDiaryCount();
+  }, []);
 
   return (
     <St.MainWrapper>
@@ -17,7 +34,7 @@ const Main = () => {
       <Header />
       <St.CountWrapper>
         내일을 기대하는 사람이
-        <St.CountNum> {cnt}명 </St.CountNum> 있어요.
+        <St.CountNum> &nbsp;{getCount}명 &nbsp; </St.CountNum> 있어요.
       </St.CountWrapper>
       <St.MainImageWrapper>
         <St.MainTextWrapper>
