@@ -22,13 +22,15 @@ export default Header;
 
 const St = {
   HeaderWrapper: styled.div`
+  align-items: center;
         display: flex;
-        padding: 0rem 1.8rem 1.6rem 2rem;
+        height: 6.9rem;
+        padding: 0rem 2rem 1.6rem 1.8rem;
     `,
 
   HeaderTitle: styled.div`
-        margin-left: 12rem;
-        margin-top: 1.8rem;
+        align-items: center;
+        margin: 1.8rem 9.3rem 0rem 11rem;
         ${({ theme }) => theme.fonts.Subhead};
         color: ${({ theme }) => theme.colors.white};
     `,
@@ -39,6 +41,6 @@ const St = {
     `,
 
   IconWrapper: styled.div`
-        margin-top: 1.6rem;
+        margin-top: 2.3rem;
     `,
 }
