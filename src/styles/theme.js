@@ -21,6 +21,7 @@ function FONT({ weight, size, lineHeight = 1, spacing = 'normal' }) {
 }
 
 const fonts = {
+  Display: FONT({ weight: 300, size: 8, spacing: '-0.6px' }),
   Head: FONT({ weight: 700, size: 2.4, lineHeight: 1.4 }),
   Subhead: FONT({ weight: 700, size: 1.8, lineHeight: 1.2, spacing: '-0.6px' }),
   Button: FONT({ weight: 700, size: 1.6, lineHeight: 1.3 }),
