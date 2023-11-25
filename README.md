@@ -1,21 +1,30 @@
 <div align="center">
 
 <h2> 나는 내일 </h2>
+<img width="283" alt="스크린샷 2023-11-26 오전 8 09 50" src="https://github.com/DO-SOPT-SOPKATHON-TEAM-2th/Client/assets/96781926/eefce8a9-c947-4d2c-9087-b03bee48d8ca">
 
-<img src=""  alt="서비스대표-이미지" />
 <div>내일을 기록하는 일기 웹앱 : 내면성장을 위해 쓰는 ‘일기’는 과거의 기록이다. 바꿀 수 없는 오늘의 기록 대신, 내일을 상상하며 살아갈 에너지를 느끼자</div>
 
 </div>
 
-<h2> ✨ (서비스) 주요 기능 </h2>
+<h2> ✨ '나는 내일' 주요 기능 </h2>
 
 <h3> 1️⃣ 내일 일기 작성 </h3>
-<img src=""  alt="기능1-대표이미지" />
+<img width="200" alt="스크린샷 2023-11-26 오전 8 07 27" src="https://github.com/DO-SOPT-SOPKATHON-TEAM-2th/Client/assets/96781926/ed4d9a48-6d16-4001-8314-00f3dfd5ba02">
+
+<img width="200" alt="스크린샷 2023-11-26 오전 8 13 27" src="https://github.com/DO-SOPT-SOPKATHON-TEAM-2th/Client/assets/96781926/7e311c7c-e534-4f58-8297-e5f9a183822a">
+
+<img width="200" alt="스크린샷 2023-11-26 오전 8 15 25" src="https://github.com/DO-SOPT-SOPKATHON-TEAM-2th/Client/assets/96781926/4e9ef9d9-20f7-456b-9801-8eecf4fe0ec0">
+
+
+
 <div >내일의 감정을 선택하고, 글쓰기 페이지를 통해 내일 일기를 익명으로 작성한다. <br/></div>
 
 
 <h3> 2️⃣ 누군가의 내일 보러가기 </h3>
-<img src=""  alt="기능1-대표이미지" />
+
+<img width="200" alt="스크린샷 2023-11-26 오전 8 12 07" src="https://github.com/DO-SOPT-SOPKATHON-TEAM-2th/Client/assets/96781926/398e0ce9-74b4-4a70-a8b8-789031034221">
+
 <div >다른 사람이 쓴 내일 일기를 확인하고 좋아요를 남길 수 있다.  <br/></div>
 
 
