@@ -25,6 +25,8 @@ const ButtonContainer = styled.button`
 
   position: fixed;
   bottom: 3.4rem;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: center;

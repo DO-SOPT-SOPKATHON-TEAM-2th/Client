@@ -4,7 +4,8 @@ import { NavigationLeftIc } from '../../assets/index.js';
 import SaveBtn from './SaveBtn.jsx';
 
 /** Header Component */
-const Header = () => {
+const Header = ({ isButtonDisabled }) => {
+
   return (
     <St.HeaderWrapper>
       <St.IconWrapper>
@@ -12,7 +13,8 @@ const Header = () => {
       </St.IconWrapper>
       <St.HeaderTitle>글쓰기</St.HeaderTitle>
       <St.ButtonWrapper>
-        <SaveBtn />
+        <SaveBtn
+          isButtonDisabled={isButtonDisabled} />
       </St.ButtonWrapper>
     </St.HeaderWrapper>
   )

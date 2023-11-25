@@ -5,6 +5,7 @@ import Error from '@pages/Error/Error';
 import Main from '@pages/Main/Main';
 import Post from '@pages/Post/Post';
 import Splash from '@pages/Splash/Splash';
+import Emotion from './pages/Post/Emotion';
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
       { path: '/board', element: <Board /> },
       { path: '/main', element: <Main /> },
       { path: '/post', element: <Post /> },
+      { path: '/emotion', element: <Emotion /> },
       { path: '/splash', element: <Splash /> },
     ],
   },

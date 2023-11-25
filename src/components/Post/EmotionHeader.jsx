@@ -24,8 +24,7 @@ const EmotionHeader = () => {
 export default EmotionHeader
 
 const St = {
-    HeaderWrapper: styled.div`
-        background: ${({ theme }) => theme.colors.black};
+    HeaderWrapper: styled.div` 
         padding-top: 1.6rem;
         padding-left: 1.8rem;
     `,
