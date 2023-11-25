@@ -1,4 +1,9 @@
-/** error page */
-export default function Error() {
-  return <div>Error</div>;
+/** Error page */
+
+const Error = () => {
+  return (
+    <div>Error</div>
+  )
 }
+
+export default Error;
