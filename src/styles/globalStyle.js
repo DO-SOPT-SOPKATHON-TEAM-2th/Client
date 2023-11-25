@@ -1,16 +1,5 @@
-import styled, { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import resetStyle from './resetStyle.js';
-
-export const flexCenter = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const SectionContainer = styled.section`
-  width: 100%;
-  padding: 0 6rem;
-`;
 
 export const GlobalStyle = createGlobalStyle`
   ${resetStyle}
@@ -25,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     letter-spacing: normal;
+    background-color: ${({ theme }) => theme.colors.black};
   }
 `;
 
