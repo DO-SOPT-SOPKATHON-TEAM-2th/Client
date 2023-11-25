@@ -30,7 +30,7 @@ const Board = () => {
   return (
     <SectionContainer>
       <HeaderContainer>
-        <Link>
+        <Link to="/main">
           <NavigationLeftIc />
         </Link>
         <h1>게시판</h1>
