@@ -5,8 +5,28 @@ import { SectionContainer } from '@styles/common/commonStyle';
 import Button from '../common/Button/Button';
 import { Link } from 'react-router-dom';
 import BoardArticle from './BoardArticle';
+import reqAPI from '@api/reqAPI';
+import { useEffect, useState } from 'react';
 
 const Board = () => {
+  const [count, setCount] = useState(0);
+  const [diaries, setDiaries] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await reqAPI.get('/api/diary/count');
+        const diaries = await reqAPI.get('/api/diaries');
+        setDiaries(diaries.data.data.diaryInfos);
+        setCount(data.data.data);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <SectionContainer>
       <HeaderContainer>
@@ -18,17 +38,20 @@ const Board = () => {
       <WaitingText>
         <strong>R=VD &nbsp;</strong>
         <span>내일을 기다리는 사람이 &nbsp;</span>
-        <strong>32명 &nbsp;</strong>
+        <strong>{count}명 &nbsp;</strong>
         <span>있어요.</span>
       </WaitingText>
       <ArticleList>
-        <BoardArticle />
-        <BoardArticle />
-        <BoardArticle />
-        <BoardArticle />
-        <BoardArticle />
-        <BoardArticle />
-        <BoardArticle />
+        {diaries.map(({ author, likeCount, title, content, diaryId }) => (
+          <BoardArticle
+            key={`${author}-${title}`}
+            author={author}
+            likeCount={likeCount}
+            title={title}
+            content={content}
+            diaryId={diaryId}
+          />
+        ))}
       </ArticleList>
       <Button>내일 일기 쓰기</Button>
     </SectionContainer>

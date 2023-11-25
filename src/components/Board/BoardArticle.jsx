@@ -2,26 +2,40 @@
 import { BoardLikeOffIc, BoardLikeOnIc } from '@assets';
 import { useState } from 'react';
 import styled from 'styled-components';
+import reqAPI from '../../api/reqAPI';
 
-const BoardArticle = () => {
+const BoardArticle = ({ author, likeCount, title, content, diaryId }) => {
   const [isLike, setIsLike] = useState(false);
+  const [realTimeLikeCount, setRealTimeLikeCount] = useState(likeCount);
+
+  const handleClick = async () => {
+    setIsLike((prev) => !prev);
+    setRealTimeLikeCount((prev) => prev + 1);
+
+    await reqAPI.put(`/api/diary/like/${diaryId}`);
+  };
 
   return (
     <li>
       <ArticleContainer>
-        <h2>줄넘기를 한다는 것</h2>
-        <ArticleText>
-          내일은 나는 이걸 할 것이다. 줄넘기를 할것이다. 그리고 뛸 것이다. 내일은 나는 이걸 할것이다. 줄넘기를 할것이다.
-        </ArticleText>
+        <h2>{title}</h2>
+        <ArticleText>{content}</ArticleText>
         <div>
-          <p>bye091790</p>
-          <button
-            onClick={() => {
-              setIsLike((prev) => !prev);
-            }}>
-            {!isLike && <BoardLikeOffIc />}
-            {isLike && <BoardLikeOnIc />}
-          </button>
+          <p>{author}</p>
+          <LikeBox>
+            <span>{realTimeLikeCount}</span>
+            <button
+              onClick={handleClick}
+              onMouseOver={() => {
+                setIsLike(true);
+              }}
+              onMouseOut={() => {
+                setIsLike(false);
+              }}>
+              {!isLike && <BoardLikeOffIc />}
+              {isLike && <BoardLikeOnIc />}
+            </button>
+          </LikeBox>
         </div>
       </ArticleContainer>
     </li>
@@ -53,4 +67,23 @@ const ArticleContainer = styled.article`
 
 const ArticleText = styled.p`
   margin-bottom: 0.6rem;
+`;
+
+const LikeBox = styled.div`
+  ${({ theme }) => theme.fonts.Caption};
+
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.colors.white};
+
+  button {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  button:hover {
+    fill: 'green';
+  }
 `;
