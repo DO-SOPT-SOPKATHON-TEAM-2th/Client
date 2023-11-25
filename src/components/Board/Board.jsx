@@ -53,7 +53,7 @@ const Board = () => {
           />
         ))}
       </ArticleList>
-      <Button to="/post">내일 일기 쓰기</Button>
+      <Button to="/emotion">내일 일기 쓰기</Button>
     </SectionContainer>
   );
 };
