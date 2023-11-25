@@ -23,6 +23,8 @@ export default Button;
 const ButtonContainer = styled.button`
   ${({ theme }) => theme.fonts.Button};
 
+  position: fixed;
+  bottom: 3.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,4 +34,5 @@ const ButtonContainer = styled.button`
   background-color: ${({ disabled, theme }) => (disabled ? `${theme.colors.gray200}` : `${theme.colors.primary200}`)};
   border-radius: 8px;
   cursor: ${({ disabled }) => (disabled ? 'default' : 'cursor')};
+  z-index: 2;
 `;
