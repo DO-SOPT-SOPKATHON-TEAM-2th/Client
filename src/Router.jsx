@@ -6,6 +6,7 @@ import Main from '@pages/Main/Main';
 import Post from '@pages/Post/Post';
 import Splash from '@pages/Splash/Splash';
 import Emotion from './pages/Post/Emotion';
+import Complete from './pages/Post/Complete';
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ export const router = createBrowserRouter([
       { path: '/post', element: <Post /> },
       { path: '/emotion', element: <Emotion /> },
       { path: '/splash', element: <Splash /> },
+      { path: '/complete', element: <Complete /> },
     ],
   },
 ]);
