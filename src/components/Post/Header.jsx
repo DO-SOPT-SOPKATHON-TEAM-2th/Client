@@ -2,17 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavigationLeftIc } from '../../assets/index.js';
 import SaveBtn from './SaveBtn.jsx';
-import { Link } from 'react-router-dom';
 
 /** Header Component */
-const Header = ({ isButtonDisabled }) => {
+const Header = ({ isButtonDisabled, handleNext, emotion, inputValues }) => {
   return (
     <St.HeaderWrapper>
-      <St.IconWrapper to="/emotion">
+      <St.IconWrapper onClick={handleNext}>
         <NavigationLeftIc />
       </St.IconWrapper>
       <St.HeaderTitle>글쓰기</St.HeaderTitle>
-      <St.ButtonWrapper to="/board">
+      <St.ButtonWrapper>
         <SaveBtn isButtonDisabled={isButtonDisabled} />
       </St.ButtonWrapper>
     </St.HeaderWrapper>
@@ -36,12 +35,12 @@ const St = {
     color: ${({ theme }) => theme.colors.white};
   `,
 
-  ButtonWrapper: styled(Link)`
+  ButtonWrapper: styled.button`
     margin-left: auto;
     margin-top: 0.8rem;
   `,
 
-  IconWrapper: styled(Link)`
+  IconWrapper: styled.button`
     margin-top: 2.3rem;
   `,
 };
