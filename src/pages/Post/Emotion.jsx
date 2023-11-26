@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import EmotionHeader from '../../components/Post/EmotionHeader';
-import SelectEmotion from '../../components/Post/SelectEmotion';
-import Button from '../../components/common/Button/Button';
+import EmotionHeader from '@components/Post/EmotionHeader';
+import SelectEmotion from '@components/Post/SelectEmotion';
+import Button from '@components/common/Button/Button';
 import Post from './Post';
 
 const Emotion = () => {

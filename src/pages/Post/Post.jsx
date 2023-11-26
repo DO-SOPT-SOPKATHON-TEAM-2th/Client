@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Header from '../../components/Post/Header';
-import Nickname from '../../components/Post/Nickname';
-import TextArea from '../../components/Post/TextArea';
-import Title from '../../components/Post/Title';
+import Header from '@components/Post/Header';
+import Nickname from '@components/Post/Nickname';
+import TextArea from '@components/Post/TextArea';
+import Title from '@components/Post/Title';
 
 /** Post page */
 const Post = ({ handleNext, emotion }) => {
