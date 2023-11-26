@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { MainWriteIc, NavigationRightIc } from '../../assets';
-import mainImg from '../../assets/images/mainImg@2x.png';
-import Header from '../../components/Main/Header';
-import useRouter from '../../hooks/useRouter';
-import calculateDate from '../../utils/CalculateDate';
-import reqAPI from '../../api/reqAPI';
+import { MainWriteIc, NavigationRightIc } from '@assets';
+import mainImg from '@assets/images/mainImg@2x.png';
+import Header from '@components/Main/Header';
+import useRouter from '@hooks/useRouter';
+import calculateDate from '@utils/CalculateDate';
+import reqAPI from '@api/reqAPI';
 
 /** Main page */
 const Main = () => {
