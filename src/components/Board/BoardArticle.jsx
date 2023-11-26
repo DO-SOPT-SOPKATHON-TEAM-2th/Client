@@ -2,7 +2,7 @@
 import { BoardLikeOffIc, BoardLikeOnIc } from '@assets';
 import { useState } from 'react';
 import styled from 'styled-components';
-import reqAPI from '../../api/reqAPI';
+import reqAPI from '@api/reqAPI';
 
 const BoardArticle = ({ author, likeCount, title, content, diaryId }) => {
   const [isLike, setIsLike] = useState(false);

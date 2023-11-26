@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { NavigationLeftIc } from '../../assets';
-import Button from '../../components/common/Button/Button';
-import useRouter from '../../hooks/useRouter';
+import { NavigationLeftIc } from '@assets';
+import Button from '@components/common/Button/Button';
+import useRouter from '@hooks/useRouter';
 const Complete = () => {
   // const [isActive, setIsActive] = useState(false);
   const { handleRouter } = useRouter();

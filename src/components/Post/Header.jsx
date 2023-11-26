@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavigationLeftIc } from '../../assets/index.js';
+import { NavigationLeftIc } from '@assets/index.js';
 import SaveBtn from './SaveBtn.jsx';
 
 /** Header Component */
