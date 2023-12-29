@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import reqAPI from '@api/reqAPI';
 import { MainWriteIc, NavigationRightIc } from '@assets';
 import mainImg from '@assets/images/mainImg@2x.png';
 import Header from '@components/Main/Header';
 import useRouter from '@hooks/useRouter';
 import calculateDate from '@utils/CalculateDate';
-import reqAPI from '@api/reqAPI';
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 /** Main page */
 const Main = () => {
@@ -37,7 +37,6 @@ const Main = () => {
 
   return (
     <St.MainWrapper>
-      <St.RemainContainer></St.RemainContainer>
       <Header />
       <St.CountWrapper>
         내일을 기대하는 사람이
@@ -82,9 +81,6 @@ const St = {
     background-color: ${({ theme }) => theme.colors.black};
   `,
 
-  RemainContainer: styled.div`
-    height: 4.4rem;
-  `,
   CountWrapper: styled.div`
     display: flex;
     justify-content: center;

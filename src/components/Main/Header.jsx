@@ -1,9 +1,9 @@
 /** Main page */
-import React from 'react';
-import styled from 'styled-components';
 import { NavigationLeftIc } from '@assets';
 import mainTitle from '@assets/images/mainTitle.png';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Header = () => {
   return (
@@ -26,7 +26,7 @@ const St = {
     gap: 7.78rem;
     height: 4.9rem;
     background-color: transparent;
-    padding: 0 1.8rem;
+    padding: 1.2rem 1.8rem;
   `,
 
   TitleImg: styled.img`
