@@ -77,6 +77,7 @@ const St = {
     flex-direction: column;
     align-items: center;
     background-image: url('background.png');
+    background-size: contain;
     background-repeat: no-repeat;
     background-color: ${({ theme }) => theme.colors.black};
   `,

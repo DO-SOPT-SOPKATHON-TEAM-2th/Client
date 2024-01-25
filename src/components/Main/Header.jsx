@@ -25,7 +25,6 @@ const St = {
     align-items: center;
     gap: 7.78rem;
     height: 4.9rem;
-    background-color: transparent;
     padding: 1.2rem 1.8rem;
   `,
 
